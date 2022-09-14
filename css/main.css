@@ -641,6 +641,7 @@ img {
 .footer-container {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .footer .logo {
@@ -681,11 +682,9 @@ img {
   transition: color var(--transition-dur-and-func);
 }
 
-.footer-contacts {
-  margin-left: 70px;
-}
-
 .footer-contacts-title {
+  margin-bottom: 20px;
+
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -709,7 +708,6 @@ img {
   height: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
@@ -728,13 +726,8 @@ img {
   fill: var(--primary-bg-color);
 }
 
-.footer-form-container {
-  margin-left: 93px;
-}
-
 .footer-form {
   display: flex;
-  margin-top: 20px;
 }
 
 .footer-form-field {
@@ -838,10 +831,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   position: absolute;
   top: 8px;
   right: 8px;
+
+  transition: fill var(--transition-dur-and-func);
 
   width: 30px;
   height: 30px;
@@ -849,6 +845,11 @@ img {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  fill: var(--accent-color);
 }
 
 
@@ -872,6 +873,10 @@ img {
 
 .modal-form-field {
   margin-bottom: 10px;
+}
+
+.modal-form-field-textarea {
+  margin-bottom: 20px;
 }
 
 .modal-form-field-desc {
@@ -945,7 +950,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
   margin-bottom: 30px;
   cursor: pointer;
   
@@ -968,7 +972,8 @@ img {
     background-size var(--transition-dur-and-func);
 }
 
-.modal-form-check:checked + .modal-form-check-box .modal-form-check-icon {
+.modal-form-check:checked + .modal-form-check-box .modal-form-check-icon,
+.modal-form-check:focus + .modal-form-check-box .modal-form-check-icon {
   fill: var(--accent-color);
   background-color: var(--accent-color);
   background-image: url(../images-index/icon\ full\ check.svg);
